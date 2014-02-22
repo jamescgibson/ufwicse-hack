@@ -1,6 +1,8 @@
 #calculate the average from the ../data/
 
-CSV.foreach("../data/electric.csv") do
+data = []
+CSV.foreach("../data/electric.csv") do |row|
+  if row[4] 
 
-
+  end
 end
