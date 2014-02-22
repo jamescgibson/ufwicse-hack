@@ -1,5 +1,14 @@
 $(document).ready(function() {
-  $("#go").on("click", function(event) {
+  $("#searchBar").on('keyup', function(event) {
+		if(event.which == 13) {
+			//do the thing with the address
+			event.preventDefault();
+			var address = $("#address").val();
+			functions.//stuffs
+		}
+    //DO THE STUFF HERE
+  });
+	$("#searchBtn").on('click', function(event) {
     //do the thing with the address
     event.preventDefault();
     var address = $("#address").val();
@@ -7,7 +16,3 @@ $(document).ready(function() {
     //DO THE STUFF HERE
   });
 });
-
-function displayElectric(address) {
-
-}
