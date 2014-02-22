@@ -3,11 +3,9 @@ $(document).ready(function() {
     //do the thing with the address
     event.preventDefault();
     var address = $("#address").val();
-
-    //DO THE STUFF HERE
+  
+    searchQuery();
+    $(".result").show();
+    console.log("Shown");
   });
 });
-
-function displayElectric(address) {
-
-}

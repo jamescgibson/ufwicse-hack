@@ -10,6 +10,7 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="display.js"></script>
+<script src="functions.js"></script>
 <script src="api.js"></script>
 
 <style>
@@ -18,7 +19,7 @@
 		visibility: visible;
 	}
 	.result {	
-		visibility: hidden;
+    display: none;
 	}
 	
 </style>
@@ -73,15 +74,18 @@
 		<span>Water Consumption:</span> <!-- You use more water than XX% of Gainesvillians. -->
 		<span id="water"></span><!-- water percentile -->
 		<br>
-		<span>Waste Contribution:</span> <!-- You throw away more waste than XX% of Gainesvillians. -->
-		<span id="garbage"></span><!-- garbage percentile -->
 		<span>Natural Gas Contribution:</span> <!-- You throw away more waste than XX% of Gainesvillians. -->
 		<span id="natGas"></span><!-- garbage percentile -->
+		<br>
 		
 		<span>Electric Percentile Contribution:</span> <!-- You throw away more waste than XX% of Gainesvillians. -->
 		<span id="elecPer"></span><!-- garbage percentile -->
+		<br>
 		<span>Water Percentile Contribution:</span> <!-- You throw away more waste than XX% of Gainesvillians. -->
 		<span id="waterPer"></span><!-- garbage percentile -->
+		<br>
+		<span>NatGas Percentile Contribution:</span> <!-- You throw away more waste than XX% of Gainesvillians. -->
+		<span id="natGasPer"></span><!-- garbage percentile -->
 	</div>
   </div>
 </div> <!-- end container --> 
