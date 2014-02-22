@@ -2,27 +2,22 @@
 //get address from search bar, 
 //pass into api to gather all data related to it
 
-//turn address into location object
-//return object
-
-//gets address entered into the search bar and creates a location object
+//gets address entered into the search bar
 function searchQuery() {
 	var addr = document.getElementById("address");
 	
-	var location = new Location(addr);
+	var elec = api.getNatGasFromServer(addr, callback);
+	document.getElementById("electricity").innerText = elec;
+	
+	var watr = api.getNatGasFromServer(addr, callback);
+	document.getElementById("water").innerText = watr;
+	
+	var trash = api.getNatGasFromServer(addr, callback);
+	document.getElementById("garbage").innerText = trash;
+	
+	var avgrall = averageRating();
+	document.getElementById("rank").innerText = trash;
+	
 }
 
-//associate data with HTML elements
-function displayData(var array) {
-	document.getElementById("electricity") = ;
-	document.getElementById("water");
-	document.getElementById("garbage");
-	
-	var overall = location.overallRating;
-	var elecPercentile = location.electricityPercentile;
-	var waterPercentile = location.waterPercentile;
-	var trashPercentile = location.garbagePercentile;
-	
-	content.innerText = "\nOverall Rating "+overall + "\nElectricity Percentile "+elecPercentile + "\nWater Percentile "+waterPercentile + "\nGarbage Percentile "+trashPercentile;
-}
 
