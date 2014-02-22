@@ -18,87 +18,90 @@
 		background-color: #F2FEEA;
 	}
 	a {
-		color: #3DB789;
+		color: black;/*#3DB789;*/
+	}
+	h4 { 
+		font-style:italic;
+	}
+	btn {
+		background-color: #94DA62;
 	}
 	
 	.about {
+		color: #F2FEEA;
+		background-color: #5cb85c;
 		visibility: visible;
 	}
 	.result {	
 		visibility: hidden;
+	}
+	.search {
+		margin-top: 4em;
 	}
 	
 </style>
 </head>
 
 <body>
-
-
-<div class="container" style="margin-top: 30px;">
-  <div class="row">
-		<div class="col-xs-3">
-		    <div id="logo">
-		    	<img src="greenLeaf.jpg" width="200" height="200">
-		    </div>
+	<div class="container" style="margin-top: 30px;">
+		<div class="row">
+			<div class="col-xs-3">
+					<div id="logo">
+						<img src="greenLeaf.jpg" width="200" height="200">
+					</div>
+			</div>
+			<div class="col-xs-9">
+				<h1>IMPHACT</h1>
+				<h4>informing for action</h4>
+				<div class="row search">
+					<form role="form" class="form-inline">
+						<div class="col-xs-8">
+							<div class="form-group">
+								<input id="searchBar" type="address" class="form-control" id="address" placeholder="Enter an Address">
+								<button id="searchBtn" type="button" class="btn btn-success" id="go"> Go! </button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
-		<div class="col-xs-9">
-			<h1>IMPHACT</h1>
+		<div class="row">
+			<div class="col-xs-3">
+				<div id="sidebar">
+				<br>
+				<br>
+				<br>
+				<br>
+		<table>
+						<tr><td><a href="index.html">Home</a></td></tr>
+						<tr><td><a href="">Contact</td></tr>
+						<tr><td><a href="">Greenest Businesses</td></tr>
+					</table>  
+		</div><!--end sidebar -->
+				</div>
+		
+			<div class="col-xs-9">
+				<div class="jumbotron about">
+					<h1>Im(ph)Act!</h1>
+					<p>(eh &bull; m &bull; f &bull; act) noun.</p>
+					<p>To make an impact in the community and demonstrate how we can <big>ACT</big></p>
+				</div>
 		</div>
-	</div>
-  <div class="row">
-    <div class="col-xs-3">
-      <div id="sidebar">
-      <br>
-      <br>
-      <br>
-      <br>
-  <table>
-          <tr><td><a href="index.html">Home</a></td></tr>
-          <tr><td><a href="">Contact</td></tr>
-          <tr><td><a href="">Greenest Businesses</td></tr>
-        </table>  
-  </div><!--end sidebar -->
-      </div>
-  
-    <div class="col-xs-9">
-      <div class="jumbotron">
-    <h1>Im(ph)Act!</h1>
-    <p>(eh-m-f-act) noun.</p>
-    <p>To make an impact in the community and demonstrate the how we can <big>ACT</big></p>
-  </div>
-      <div class="row">
-        <form role="form" class="form-inline">
-          <div class="col-xs-8">
-            <div class="form-group">
-              <input id="searchBar" type="address" class="form-control" id="address" placeholder="Enter an Address">
-              <button id="searchBtn" type="button" class="btn btn-success" id="go"> Go! </button>
-            </div>
-          </div>
-        </form>
-      </div>
-  </div>
-  <div class="content col-xs-8">
-	<div class="about">
-		<h1>About Im(ph)Act</h1>
-		<p> Im(ph)Act's mission is to inspire Gainesville's citizens to make a positive impact on our environment.  We use facts to motivate actions.
-		<br>
-		Individuals can see how they stack up with the rest of Gainesville. Businesses can proudly boast that they are the "Greenest in Gainesville" of their industry.
-		</p>
-	</div>	
-	<div class="result">
-		<h1 id="type"></h1> <!-- Residential/Business -->
-		<h2 id="rank"></h2><!-- overall rank -->
-		<img id="badge"><!-- badge next to rank -->
-		<span>Electricity Consumption:</span> <!-- You use more electricity than XX% of Gainesvillians. -->
-		<span id="electricity"></span><!-- electricity percentile -->
-		<br>
-		<span>Water Consumption:</span> <!-- You use more water than XX% of Gainesvillians. -->
-		<span id="water"></span><!-- water percentile -->
-		<br>
-		<span>Waste Contribution:</span> <!-- You throw away more waste than XX% of Gainesvillians. -->
-		<span id="garbage"></span><!-- garbage percentile -->
-	</div>
-  </div>
-</div> <!-- end container --> 
+		<div class="content col-xs-8">	
+		<div class="result">
+			<h1 id="type"></h1> <!-- Residential/Business -->
+			<h2 id="rank"></h2><!-- overall rank -->
+			<img id="badge"><!-- badge next to rank -->
+			<span>Electricity Consumption:</span> <!-- You use more electricity than XX% of Gainesvillians. -->
+			<span id="electricity"></span><!-- electricity percentile -->
+			<br>
+			<span>Water Consumption:</span> <!-- You use more water than XX% of Gainesvillians. -->
+			<span id="water"></span><!-- water percentile -->
+			<br>
+			<span>Waste Contribution:</span> <!-- You throw away more waste than XX% of Gainesvillians. -->
+			<span id="garbage"></span><!-- garbage percentile -->
+		</div>
+		</div>
+	</div> <!-- end container --> 
 </body>
 </html>
