@@ -2,22 +2,21 @@
 //get address from search bar, 
 //pass into api to gather all data related to it
 
-//gets address entered into the search bar
+//turn address into location object
+//return object
+
+//gets address entered into the search bar and creates a location object
 function searchQuery() {
 	var addr = document.getElementById("address");
 	
-	var elec = api.getNatGasFromServer(addr, callback);
-	document.getElementById("electricity").innerText = elec;
+	callback = function(id) {
+		return function(data) {
+			document.getElementById(id).innerText = data;
+		}
+	}
 	
-	var watr = api.getNatGasFromServer(addr, callback);
-	document.getElementById("water").innerText = watr;
-	
-	var trash = api.getNatGasFromServer(addr, callback);
-	document.getElementById("garbage").innerText = trash;
-	
-	var avgrall = averageRating();
-	document.getElementById("rank").innerText = trash;
-	
+	//api.getNatGasFromServer(addr, callback("naturalgas"));
+	api.getNatGasFromServer(addr, callback("electricity"));
+	api.getWaterFromServer(addr, callback("garbage"));
+	//api.getBizFromServer(addr, callback("rank"));		
 }
-
-
