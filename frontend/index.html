@@ -12,6 +12,17 @@
 <script src="location.js"></script>
 <script src="api.js"></script>
 
+<style>
+
+	.about {
+		visibility: visible;
+	}
+	.result {	
+		visibility: hidden;
+	}
+	
+</style>
+
 </head>
 
 <body>
@@ -44,16 +55,28 @@
       <p> Stuff is awesome! </p>
     </div>
   </div>
+  <div class="content">
+	<div class="about">
+		<h1>About Im(ph)Act</h1>
+		<p> Im(ph)Act's mission is to use facts about utility usage to inspire Gainesville's citizens to make a positive impact on our environment.
+		<br>
+		Individuals can see how they stack up with the rest of Gainesville. Businesses can proudly boast that they are the "Greenest in Gainesville" of their industry.
+		</p>
+	</div>	
+	<div class="result">
+		<h1 id="type"></h1> <!-- Residential/Business -->
+		<h2 id="rank"></h2><!-- overall rank -->
+		<img id="badge"><!-- badge next to rank -->
+		<span>Electricity Consumption:</span> <!-- You use more electricity than XX% of Gainesvillians. -->
+		<span id="electricity"></span><!-- electricity percentile -->
+		<br>
+		<span>Water Consumption:</span> <!-- You use more water than XX% of Gainesvillians. -->
+		<span id="water"></span><!-- water percentile -->
+		<br>
+		<span>Waste Contribution:</span> <!-- You throw away more waste than XX% of Gainesvillians. -->
+		<span id="garbage"></span><!-- garbage percentile -->
+	</div>
+  </div>
 </div> <!-- end container --> 
-	<div class="content">
-	<h1 class="about">About Im(ph)Act</h1>
-	<p class="about"> text text text super cool text!
-	<h1 class="result"></h1> <!-- Residential/Business -->
-	<h2 class="result"></h2><!-- overall rank -->
-	<img class="result rank"><!-- badge next to rank -->
-	<span class="result electricity"><!-- electricity percentile -->
-	<span class="result water"><!-- water percentile -->
-	<span class="result garbage"><!-- garbage percentile -->
-</div>
 </body>
 </html>
