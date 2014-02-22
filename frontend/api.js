@@ -6,6 +6,8 @@ api.potableEndpoint = "http://data.cityofgainesville.org/resource/bn44-jxhy.json
 api.waterEndpoint = "http://data.cityofgainesville.org/resource/khkv-62wd.json";
 api.codeEndpoint = "http://data.cityofgainesville.org/resource/vu9p-a5f7.json";
 api.bizEndpoint = "http://data.cityofgainesville.org/resource/hk2b-em59.json";
+api.taxEndpoint = "http://data.cityofgainesville.org/resource/vs8t-njwg.json";
+
 
 api.encodeAddress = function(address) {
   var result = address.replace(/ /g, "%20");
@@ -72,5 +74,13 @@ api.getBizFromServer = function(address, callback) {
       result = data[0].name;
     }
     callback(result);
+  });
+}
+
+//UNTESTED 
+api.getTaxRollData = function(address, callback) {
+  console.log(api.taxEndpoint + "?physical_address=" + address);
+  $.get(api.bizEndpoint+ "?location_address=" + address, function(data) {
+    callback(data);
   });
 }
