@@ -8,12 +8,12 @@
 <!--<link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/amelia/bootstrap.min.css" rel="stylesheet">-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="location.js"></script>
+<script src="display.js"></script>
 <script src="api.js"></script>
 
 <style>
+
 	body {
 		font-family: arial, helvetica, sans-serif;
 		background-color: #F2FEEA;
@@ -21,8 +21,15 @@
 	a {
 		color: #3DB789;
 	}
+	
+	.about {
+		visibility: visible;
+	}
+	.result {	
+		visibility: hidden;
+	}
+	
 </style>
-
 </head>
 
 <body>
@@ -57,18 +64,38 @@
    <p>Talk about what we do blah blah!</p>
   </div>
       <div class="row">
-        <form role="form">
-          <div class="col-xs-7">
+        <form role="form" class="form-inline">
+          <div class="col-xs-8">
             <div class="form-group">
-              <input type="address" class="form-control" id="address" placeholder="Enter an Address">
-            </div> 
-          <div class="col-xs-1">
+              <input id="searchBar" type="address" class="form-control" id="address" placeholder="Enter an Address">
+              <button id="searchBtn" type="button" class="btn btn-success" id="go"> Go! </button>
+            </div>
           </div>
         </form>
       </div>
-    </div>
+  </div>
+  <div class="content col-xs-8">
+	<div class="about">
+		<h1>About Im(ph)Act</h1>
+		<p> Im(ph)Act's mission is to inspire Gainesville's citizens to make a positive impact on our environment.  We use facts to motivate actions.
+		<br>
+		Individuals can see how they stack up with the rest of Gainesville. Businesses can proudly boast that they are the "Greenest in Gainesville" of their industry.
+		</p>
+	</div>	
+	<div class="result">
+		<h1 id="type"></h1> <!-- Residential/Business -->
+		<h2 id="rank"></h2><!-- overall rank -->
+		<img id="badge"><!-- badge next to rank -->
+		<span>Electricity Consumption:</span> <!-- You use more electricity than XX% of Gainesvillians. -->
+		<span id="electricity"></span><!-- electricity percentile -->
+		<br>
+		<span>Water Consumption:</span> <!-- You use more water than XX% of Gainesvillians. -->
+		<span id="water"></span><!-- water percentile -->
+		<br>
+		<span>Waste Contribution:</span> <!-- You throw away more waste than XX% of Gainesvillians. -->
+		<span id="garbage"></span><!-- garbage percentile -->
+	</div>
   </div>
 </div> <!-- end container --> 
 </body>
-
 </html>
