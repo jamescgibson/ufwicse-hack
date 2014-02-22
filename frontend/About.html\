@@ -4,7 +4,7 @@
 </head>
 <body>
 
- <div class="content col-xs-8">
+ <div class="content col-xs-4">
 	<div class="about">
 		<h1>About Im(ph)Act</h1>
 		<p> Im(ph)Act's mission is to inspire Gainesville's citizens to make a positive impact on our environment.  We use facts to motivate actions.
@@ -13,7 +13,13 @@
 		</p>
 		
 		<p><a href="index.html" >Home</a></p>
-	</div>	
+ </div>
+ <div class="col-xs-8">
+ 
+ <img src="greenLeaf.jpg" width="300" height="800">
+ 	
+ </div>
+	
 	
 </body>
 </html>
