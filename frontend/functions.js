@@ -15,8 +15,11 @@ function searchQuery() {
 		}
 	}
 	
-	//api.getNatGasFromServer(addr, callback("naturalgas"));
-	api.getNatGasFromServer(addr, callback("electricity"));
-	api.getWaterFromServer(addr, callback("garbage"));
-	//api.getBizFromServer(addr, callback("rank"));		
+	api.getElectricFromServer(addr, callback("electricity"));
+	api.getWaterFromServer(addr, callback("water"));
+	api.getGarbageFromServer(addr, callback("garbage"));
+	api.getNatGasFromServer(addr, callback("natGas"));
+	
+	api.getElectricPercentile(addr, callback("elecPer"))
+	api.getWaterPercentile(addr, callback("waterPer"));	
 }
